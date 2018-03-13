@@ -1,10 +1,10 @@
 FROM debian:stretch-slim
 
-RUN apt-get update && apt-get install curl
+RUN apt-get update && apt-get install -y curl
 
 RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish52/script.deb.sh | bash
 
-RUN apt-get install varnish
+RUN apt-get install -y varnish
 
 ADD start.sh /
 
