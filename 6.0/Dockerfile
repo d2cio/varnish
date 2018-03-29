@@ -9,7 +9,7 @@ RUN apt-get install -y varnish
 ADD start.sh /
 
 ENV VCL_CONFIG=/etc/varnish/default.vcl
-ENV CACHE_SIZE=100m
+ENV CACHE_SIZE=256m
 ENV PORT=80
 
 CMD "/start.sh"
